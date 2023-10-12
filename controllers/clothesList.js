@@ -18,7 +18,7 @@ export class clothesList {
                 </div>
             `
             }
-            console.log(clContent)
+            
             return clContent;
         },"");
 
@@ -39,7 +39,7 @@ export class clothesList {
                 </div>
             `
             }
-            console.log(clContent)
+            
             return clContent;
         },"");
 
@@ -60,7 +60,7 @@ export class clothesList {
                 </div>
             `
             }
-            console.log(clContent)
+            
             return clContent;
         },"");
 
@@ -81,7 +81,7 @@ export class clothesList {
                 </div>
             `
             }
-            console.log(clContent)
+            
             return clContent;
         },"");
 
@@ -102,7 +102,7 @@ export class clothesList {
                   </div>
               `
               }
-              console.log(clContent)
+              
               return clContent;
           },"");
   
@@ -123,7 +123,7 @@ export class clothesList {
                  </div>
              `
              }
-             console.log(clContent)
+             
              return clContent;
          },"");
  
@@ -144,7 +144,7 @@ export class clothesList {
                   </div>
               `
               }
-              console.log(clContent)
+              
               return clContent;
           },"");
   

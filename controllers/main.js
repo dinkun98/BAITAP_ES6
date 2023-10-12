@@ -255,7 +255,7 @@ const showAo = () => {
     dataClothes.map((item, index) => {
 
         let cl = new Clothes(item.id, item.type, item.name, item.desc, item.imgSrc_jpg, item.imgSrc_png)
-        // console.log(cl)
+        
         clList.addClothes(cl);
 
     })
@@ -275,7 +275,7 @@ const showAo = () => {
 showAo();
 
 const tryAo = (e) => {
-    // console.log(e)
+    
     let gID = e.target.getAttribute("data-id");
     let gObject = {};
     for (let value of clList.clothlist) {
@@ -295,37 +295,36 @@ const showInfo = (gObject) => {
 
     if (gObject.type === "topclothes") {
         let divAvatar = document.querySelector(".bikinitop");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else if (gObject.type === "botclothes") {
         let divAvatar = document.querySelector(".bikinibottom");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else if (gObject.type === "shoes") {
         let divAvatar = document.querySelector(".feet");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
-
+        
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else if (gObject.type === "handbags") {
         let divAvatar = document.querySelector(".handbag");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else if (gObject.type === "necklaces") {
         let divAvatar = document.querySelector(".necklace");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else if(gObject.type === "hairstyle") {
         let divAvatar = document.querySelector(".hairstyle");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
     } else{
         let divAvatar = document.querySelector(".background");
-        console.log(`"url("${gObject.imgSrcPng}")"`)
+        
 
         divAvatar.style.backgroundImage = `url("${gObject.imgSrcJpg}")`
     }
