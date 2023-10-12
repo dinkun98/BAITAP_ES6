@@ -261,7 +261,9 @@ const showAo = () => {
     })
 
     
-    document.querySelector(".tab-content").innerHTML = clList.renderClothes();
+    // document.querySelector(".tab-content").innerHTML = clList.renderClothes();
+    document.querySelector(".ao_result").innerHTML = clList.renderClothes();
+    // getEle("ao").innerHTML = clList.renderClothes();
 }
 
 showAo();
@@ -276,8 +278,8 @@ const tryAo = (e)=>{
         }
     }
 
+    //Goi ham
     showInfo(gObject)
-    // console.log(showInfo())
 }
 
 window.tryAo = tryAo;
@@ -285,8 +287,9 @@ window.tryAo = tryAo;
 const showInfo = (gObject)=>{
     let divAvatar = document.querySelector(".bikinitop");
 
+    console.log(`"url("${gObject.imgSrcPng}")"`)
 
-    console.log(gObject)
-    // divAvatar.style.background = `url('./../assets/images/clothes/${gObject.imgSrcPng}')`
+    divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
 
 }
+
