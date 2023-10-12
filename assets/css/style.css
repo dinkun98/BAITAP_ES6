@@ -68,6 +68,8 @@
   top: 12%;
   left: 22%;
   z-index: 1;
+  background-size: 250px 500px;
+  background-repeat: no-repeat;
 }
 
 .model {
