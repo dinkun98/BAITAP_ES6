@@ -260,20 +260,26 @@ const showAo = () => {
 
     })
 
-    
     // document.querySelector(".tab-content").innerHTML = clList.renderClothes();
     document.querySelector(".ao_result").innerHTML = clList.renderClothes();
+    document.querySelector(".quan_result").innerHTML = clList.renderQuan();
+    document.querySelector(".giay_result").innerHTML = clList.renderGiay();
+    document.querySelector(".toc_result").innerHTML = clList.renderToc();
+    document.querySelector(".dayChuyen_result").innerHTML = clList.renderDayChuyen();
+    document.querySelector(".tuiXach_result").innerHTML = clList.renderTuiXach();
+    document.querySelector(".nen_result").innerHTML = clList.renderNen();
+
     // getEle("ao").innerHTML = clList.renderClothes();
 }
 
 showAo();
 
-const tryAo = (e)=>{
+const tryAo = (e) => {
     // console.log(e)
     let gID = e.target.getAttribute("data-id");
     let gObject = {};
-    for(let value of clList.clothlist){
-        if(value.id == gID){
+    for (let value of clList.clothlist) {
+        if (value.id == gID) {
             gObject = value;
         }
     }
@@ -284,12 +290,48 @@ const tryAo = (e)=>{
 
 window.tryAo = tryAo;
 
-const showInfo = (gObject)=>{
-    let divAvatar = document.querySelector(".bikinitop");
 
-    console.log(`"url("${gObject.imgSrcPng}")"`)
+const showInfo = (gObject) => {
 
-    divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    if (gObject.type === "topclothes") {
+        let divAvatar = document.querySelector(".bikinitop");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else if (gObject.type === "botclothes") {
+        let divAvatar = document.querySelector(".bikinibottom");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else if (gObject.type === "shoes") {
+        let divAvatar = document.querySelector(".feet");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else if (gObject.type === "handbags") {
+        let divAvatar = document.querySelector(".handbag");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else if (gObject.type === "necklaces") {
+        let divAvatar = document.querySelector(".necklace");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else if(gObject.type === "hairstyle") {
+        let divAvatar = document.querySelector(".hairstyle");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcPng}")`
+    } else{
+        let divAvatar = document.querySelector(".background");
+        console.log(`"url("${gObject.imgSrcPng}")"`)
+
+        divAvatar.style.backgroundImage = `url("${gObject.imgSrcJpg}")`
+    }
+
+
+
 
 }
 
